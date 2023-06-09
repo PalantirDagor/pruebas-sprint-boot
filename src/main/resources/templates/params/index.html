@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Enviar Parametros del Request HTTP GET - URL</title>
+</head>
+<body>
+	<header>
+		<h1>Enviar Parametros del Request HTTP GET - URL</h1>
+	</header>
+	<article>
+		<ul>
+			<li>
+				<a th:href="@{/params/cadena(texto='Hola Benjiti')}">
+					Clic Aquí
+				</a>
+			</li>
+			<li>
+				<a th:href="@{/params/cadena(texto='Hola Elem')}">
+					/params/cadena?texto=Hola Elem
+				</a>
+			</li>
+			<li>
+				<a th:href="@{/params/varios-params(saludo='Como estas este día', numero=10)}">
+					/params/varios-params/cadena?saludo=Como estas este día, numero=10
+				</a>
+			</li>
+			<li>
+				<a th:href="@{/params/varios-params-request(saludo='Como estas este día', numero=2015)}">
+					/params/varios-params-request?saludo=Como estas este día, numero=10
+				</a>
+			</li>
+		</ul>
+	</article>
+</body>
+</html>
