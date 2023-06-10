@@ -16,8 +16,8 @@ import com.bolsadeideas.springboot.web.app.models.Usuario;
 @RequestMapping("/app")
 public class IndexController {
 	
-	@Value("${indexcontroller.titulo.getpage}")
-	private String tituloGetPage;
+	@Value("${indexcontroller.titulo.index}")
+	private String tituloIndex;
 	
 	@Value("${indexcontroller.titulo.datos-perfil}")
 	private String tituloDatosPerfil;
@@ -25,10 +25,10 @@ public class IndexController {
 	@Value("${indexcontroller.titulo.listar-perfiles}")
 	private String tituloListarPerfiles;
 	
-	@GetMapping("/getpage")
+	@GetMapping("/index")
 	public String index(Model model) {
 		
-		model.addAttribute("titulo", tituloGetPage);
+		model.addAttribute("titulo", tituloIndex);
 		return "index";
 	}
 	
